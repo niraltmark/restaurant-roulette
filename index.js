@@ -15,9 +15,9 @@ app.get('/', function(request, response) {
                 // page.customHeaders = { Referer: "http://google.com" };
                 // page.settings = { userAgent: "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_7_5)" };
                 page.open("http://www.google.com", function (status) {
-                    var text = document.title;//page.evaluate(function () {
-//                        return document.querySelector("#_eEe").innerText;
-//                    });
+                    var text = page.evaluate(function () {
+                        return document.title;
+                    });
 
                     // resolve the promise and pass 'text' back to node  
                     resolve(text);
