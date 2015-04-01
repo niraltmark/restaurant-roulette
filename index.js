@@ -13,12 +13,19 @@ app.get('/', function(request, response) {
 
                 var page = webpage.create();
                 page.open("http://www.clickatable.co.il/", function (status) {
-                    var text = page.evaluate(function () {
-                        return document.title;
+                    page.includeJs("http://ajax.googleapis.com/ajax/libs/jquery/1.6.1/jquery.min.js", function() {
+                        var text = page.evaluate(function() {
+                            return $("#ctl00_ContentPlaceHolder1_searchTab1_ddlCities").val();
+                        });
+                        
+                        resolve(text);
                     });
+//                    var text = page.evaluate(function () {
+//                        return document.title;
+//                    });
 
                     // resolve the promise and pass 'text' back to node  
-                    resolve(text);
+                    // resolve("Nir");
                 });
             }).then(function (text) {
                 // inside node again 
@@ -35,13 +42,7 @@ app.get('/', function(request, response) {
 //
 //        // console.log(document.getElementById('myagent').textContent);
 //
-//        // page.includeJs("http://ajax.googleapis.com/ajax/libs/jquery/1.6.1/jquery.min.js", function() {
-//        console.log("hey2");
-//        
-//        page.evaluate(function() {
-//                console.log("Hey,,");//$("ctl00_ContentPlaceHolder1_searchTab1_ddlCities").value());
-//            });
-//        // });
+        
 //    });
 
 // What is app.listen?
