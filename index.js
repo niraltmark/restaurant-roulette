@@ -12,9 +12,7 @@ app.get('/', function(request, response) {
             phantom.run("h1", function (selector, resolve) {
 
                 var page = webpage.create();
-                // page.customHeaders = { Referer: "http://google.com" };
-                // page.settings = { userAgent: "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_7_5)" };
-                page.open("http://www.google.com", function (status) {
+                page.open("http://www.clickatable.co.il/", function (status) {
                     var text = page.evaluate(function () {
                         return document.title;
                     });
