@@ -46,6 +46,7 @@ td-card {
   border-radius: 6px;
     
     background-color: white;
+    color:white;
 }
 /*
 td-card.card-0 {
@@ -108,8 +109,8 @@ td-card img {
         <td-card ng-repeat="card in cards" on-destroy="cardDestroyed($index)" on-swipe-left="cardSwipedLeft($index)" on-swipe-right="cardSwipedRight($index)" on-partial-swipe="cardPartialSwipe(amt)" class="card-{{$index}}" style="background-image: url({{card.image}}); background-repeat: no-repeat; background-size:cover">
           <div class="image" ng-controller="CardCtrl">
             <div class="no-text">NOPE</div>
-              <div>{{card.name}}</div>
-              <div>{{card.time}}</div>
+              <div style="text-align:center">{{card.name}}</div>
+              <div style="text-align:center">{{card.time}}</div>
             <div class="yes-text">LIKE</div>
           </div>
         </td-card>
