@@ -62,7 +62,7 @@ app.get('/restaurants/get', function(request, response) {
                     var data = page.evaluate(function(){
                         var images = ['http://www.richybug.com/wp-content/uploads/2015/01/beautiful-beauty-cute.jpg',
                                      'http://s1.favim.com/orig/14/delicious-food-yum-Favim.com-183557.jpg',
-                                     'http://www.cdn.mumbaihangout.org/75/d754ae95f6462efae61df937efc950cb.jpg',
+                                     'http://cdnimg.visualizeus.com/thumbs/b5/cd/yum,delicious,food,nonveg,tasty-b5cd68932da4664fd2628e566ad96419_h.jpg',
                                      'http://s3.favim.com/orig/40/brownie-cake-chocolate-delicious-food-Favim.com-335002.jpg'];
                         
                        return $(".restaurantNameButton").map(function(index1,element1) {
