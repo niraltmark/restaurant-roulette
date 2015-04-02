@@ -14,7 +14,7 @@
     <link href="css/ionic.app.css" rel="stylesheet">
     -->
 
-          <script src="http://code.ionicframework.com/collide/0.0.4/collide.js"></script>
+    <script src="http://code.ionicframework.com/collide/0.0.4/collide.js"></script>
 
     <!-- ionic/angularjs js -->
     <script src="lib/ionic/js/ionic.bundle.js"></script>
@@ -44,6 +44,8 @@ td-card {
   border: 1px solid #999;
   box-shadow: 0px 1px 3px rgba(0,0,0,0.2);
   border-radius: 6px;
+    
+    background-color: white;
 }
 /*
 td-card.card-0 {
@@ -103,10 +105,11 @@ td-card img {
       </ion-header-bar>
 
       <td-cards>
-        <td-card ng-repeat="card in cards" on-destroy="cardDestroyed($index)" on-swipe-left="cardSwipedLeft($index)" on-swipe-right="cardSwipedRight($index)" on-partial-swipe="cardPartialSwipe(amt)" class="card-{{$index}}">
+        <td-card ng-repeat="card in cards" on-destroy="cardDestroyed($index)" on-swipe-left="cardSwipedLeft($index)" on-swipe-right="cardSwipedRight($index)" on-partial-swipe="cardPartialSwipe(amt)" class="card-{{$index}}" style="background-image: url({{card.image}}); background-repeat: no-repeat; background-size:cover">
           <div class="image" ng-controller="CardCtrl">
             <div class="no-text">NOPE</div>
-            <img ng-src="{{card.image}}">
+              <div>{{card.name}}</div>
+              <div>{{card.time}}</div>
             <div class="yes-text">LIKE</div>
           </div>
         </td-card>

@@ -16,9 +16,9 @@ app.all('*', function(req, res, next) {
 app.get('/restaurants/get', function(request, response) {
     
     var cardTypes = [
-    { image: 'https://pbs.twimg.com/profile_images/546942133496995840/k7JAxvgq.jpeg' },
-    { image: 'https://pbs.twimg.com/profile_images/514549811765211136/9SgAuHeY.png' },
-    { image: 'https://pbs.twimg.com/profile_images/491995398135767040/ie2Z_V6e.jpeg' },
+    { name: "גוצ'ה", image: 'https://pbs.twimg.com/profile_images/546942133496995840/k7JAxvgq.jpeg', time:"20:00" },
+    { name: "ג'ירף", image: 'https://pbs.twimg.com/profile_images/514549811765211136/9SgAuHeY.png',time:"19:00" },
+    { name: "צפרה", image: 'https://pbs.twimg.com/profile_images/491995398135767040/ie2Z_V6e.jpeg',time:"21:00" },
   ];
     
     response.json(cardTypes);
