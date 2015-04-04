@@ -1,4 +1,5 @@
 require('rootpath')(); // Little helper to make node.js require relative to your project root
+require('when');
 
 var express = require('express');
 
