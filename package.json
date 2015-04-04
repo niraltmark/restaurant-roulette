@@ -10,7 +10,8 @@
     "express": "~4.9.x",
     "phridge": "~1.0.x",
     "rootpath": "~0.1.x",
-    "when": "^3.7.2"
+    "when": "^3.7.2",
+    "node-promise":"~0.5.x"
   },
   "engines": {
     "node": "0.10.x"
