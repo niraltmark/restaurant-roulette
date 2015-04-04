@@ -8,7 +8,8 @@
   },
   "dependencies": {
     "express": "~4.9.x",
-    "phridge": "~1.0.x"  
+    "phridge": "~1.0.x",
+    "rootpath": "~0.1.x"  
   },
   "engines": {
     "node": "0.10.x"
