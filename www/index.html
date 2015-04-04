@@ -106,7 +106,17 @@ td-card img {
   -webkit-transition: 0.2s opacity linear;
   transition: 0.2s opacity linear;
   opacity: 0;
-}</style>
+}
+      
+.loader {
+  margin: 0 auto;
+  width: 128px;
+  text-align: center;
+    padding-top: 100px;
+    color:#DD3745;
+    font-family: 'Poiret One', cursive;
+}
+      </style>
   </head>
   <body ng-app="starter" no-scroll>
     <ion-pane ng-controller="CardsCtrl">
@@ -114,6 +124,10 @@ td-card img {
         <h1 class="title">Restaurant Roulette</h1>
       </ion-header-bar>
 
+        <div id="loader">
+            <img src="img/loader.GIF" />
+            Loading
+        </div>
       <td-cards>
         <td-card ng-repeat="card in cards" on-destroy="cardDestroyed($index)" on-swipe-left="cardSwipedLeft($index)" on-swipe-right="cardSwipedRight($index)" on-partial-swipe="cardPartialSwipe(amt)" class="card-{{$index}}" style="background-image: url({{card.image}}); background-repeat: no-repeat; background-size:cover">
           <div class="image" ng-controller="CardCtrl">

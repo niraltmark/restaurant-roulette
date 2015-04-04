@@ -31,6 +31,8 @@ angular.module('starter', ['ionic', 'ionic.contrib.ui.tinderCards'])
     $http
         .get("/restaurants/get")
         .success(function (response) {
+            $("#loader").hide();
+        
             $scope.cards = Array.prototype.slice.call(response, 0);
         
             $scope.cardDestroyed = function(index) {
