@@ -15,7 +15,10 @@ app.all('*', function(req, res, next) {
 });
 
 // TODO :  Just add anything in the controllers folder
-require('lib/controllers/restaurants.js')(app);
+require('lib/controllers/restaurants-controller.js')(app);
+
+// TODO : Load all the moongose stuff (MongoDb)
+require('lib/storages/mongo/mongodb-initializer.js')();
 
 app.set('port', (process.env.PORT || 5000));
 

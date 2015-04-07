@@ -11,7 +11,8 @@
     "phridge": "~1.0.x",
     "rootpath": "~0.1.x",
     "when": "^3.7.2",
-    "promise":"~6.1.x"
+    "promise":"~6.1.x",
+    "mongoose":"~4.0.x"
   },
   "engines": {
     "node": "0.10.x"
