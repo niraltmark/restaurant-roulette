@@ -1,8 +1,7 @@
 {
-  "name": "node-js-getting-started",
+  "name": "restaurant-roulette",
   "version": "0.1.2",
-  "description": "A sample Node.js app using Express 4",
-  "main": "index.js",
+  "description": "A node.js app for getting open tables",
   "scripts": {
     "start": "node --harmony index.js"
   },
@@ -16,10 +15,6 @@
   },
   "engines": {
     "node": "0.12.x"
-  },
-  "repository": {
-    "type": "git",
-    "url": "https://github.com/heroku/node-js-getting-started"
   },
   "keywords": [
     "node",
