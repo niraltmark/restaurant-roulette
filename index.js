@@ -1,4 +1,6 @@
-require('rootpath')(); // Little helper to make node.js require relative to your project root
+require('rootpath')();      // Little helper to make node.js require relative to your project root
+require('lib/linq.js')();   // Another little helper to add linq with yield
+
 
 var express = require('express');
 
